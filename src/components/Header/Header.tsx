@@ -1,4 +1,5 @@
 import "../Header/Header.scss"
+import CartButton from "../CartButton/CartButton";
 
 
 
@@ -9,7 +10,7 @@ function Header(){
                 <div className="logomks">MKS</div>
                 <div className="logosistemas">Sistemas</div>
             </div>
-                <button className="cart">0</button>
+                <CartButton />
         </header>
     )
 }
