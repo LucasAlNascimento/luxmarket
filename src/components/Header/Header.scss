@@ -1,0 +1,41 @@
+$primary: #FFFFFF;
+$secondary: #0F52BA;
+$tertiary: #EEEEEE;
+$quaternary: #373737;
+
+.header {
+    display: flex;
+    width: 100%;
+    background-color: $secondary;
+    position: fixed;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 45px;
+}
+
+.logomks {
+    font-size: 40px;
+    color: $primary;
+    font-weight: 600;
+}
+
+.logosistemas {
+    font-size: 20px;
+    color: $primary;
+    font-weight: 300;
+    margin-top: 13px;
+}
+
+.cart {
+    width: 90px;
+    height: 45px;
+    align-self: center;
+    margin-right: 100px;
+    border-radius: 8px;
+    border: none;
+}
