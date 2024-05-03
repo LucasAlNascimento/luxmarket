@@ -3,9 +3,13 @@ export interface ProductData {
     name: string,
     brand: string,
     description: string,
-    price: number
+    photo: string,
+    price: number,
+    createdAt: string,
+    updatedAt: string
 }
 
 export interface ProductResponse {
-    data: ProductData[]
+    products: ProductData[];
+    count: number;
 }
