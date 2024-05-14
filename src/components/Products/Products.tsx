@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Products.scss"
 import { useQuery } from "react-query";
 import { ProductResponse } from "../../interfaces/product-data";
+import Card from "../Card/Card";
 
 function Products() {
 
@@ -12,8 +13,6 @@ function Products() {
         .get<ProductResponse>("https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC")
         .then((response) => response.data);
     });
-
-    console.log(data)
 
     if (isLoading) {
         return <div className="products">Carregando...</div>
@@ -25,7 +24,7 @@ function Products() {
     return (
         <div className="products">
             {data?.products.map((product) => (
-               <span key={product.id}>{product.name}<br/></span>
+               <Card key={product.id} photo={product.photo} name={product.name} price={product.price}/>
             ))}
         </div>
     )
