@@ -1,6 +1,9 @@
 .products {
-    padding: 200px 20px 80px;
-    display: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
+    padding: 200px 20px 80px;
+    width: 100%;
+    gap: 50px;
 }

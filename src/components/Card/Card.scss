@@ -1,16 +1,20 @@
 
 .card {
-    width: 100%;
-    max-width: 300px;
+    width: 250px;
+    max-width: 250px;
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin: 0 auto;
 }
 
 .product__image {
-    width: 100%;
+    width: 200px;
+    max-width: 200px;
 }
 
 .product__infos {
@@ -19,7 +23,7 @@
 }
 
 .product__price {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     display: block;
     margin-bottom: 10px;
