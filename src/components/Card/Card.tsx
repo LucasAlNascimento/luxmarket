@@ -13,7 +13,12 @@ function Card({ photo, name, price }: ProductData) {
     return (
         <div className="card">
 
-            <img src={photo} alt="Product Image" className="product__image"></img>
+            <div className="image__container">
+
+                <img src={photo} alt="Product Image" className="product__image"></img>
+
+            </div>
+
 
             <div className="product__infos">
                 <h2 className="product__title">{name}</h2>

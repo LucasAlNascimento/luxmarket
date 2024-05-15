@@ -17,9 +17,16 @@ $quaternary: #373737;
     margin: 0 auto;
 }
 
-.product__image {
+.image__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
-    max-width: 200px;
+    height: 200px;
+}
+
+.product__image {
+    width: 180px;
 }
 
 .product__infos {
@@ -47,5 +54,7 @@ div.product__infos > button {
     border: none;
     border-radius: 10px;
     padding: 10px;
+    font-weight: 500;
+    color: $tertiary;
 
 }
