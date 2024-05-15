@@ -1,8 +1,13 @@
 
+$primary: #b1b1b1;
+$secondary: #0F52BA;
+$tertiary: #ffffff;
+$quaternary: #373737;
+
 .card {
     width: 250px;
-    max-width: 250px;
-    background-color: rgb(255, 255, 255);
+    height: 350px;
+    background-color: $tertiary;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -36,4 +41,12 @@
 
 .button__add-cart {
     position: absolute;
+    top: 500px;
+    
+    align-self: center;
+    background-color: $secondary;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+
 }

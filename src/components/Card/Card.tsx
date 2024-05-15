@@ -18,9 +18,9 @@ function Card({ photo, name, price }: ProductData) {
             <div className="product__infos">
                 <h2 className="product__title">{name}</h2>
                 <p className="product__price">{priceFormatted}</p>
+                <button className="button__add-cart">Adicionar</button>
             </div>
 
-            <button className="button__add-cart"></button>
 
         </div>
     )
