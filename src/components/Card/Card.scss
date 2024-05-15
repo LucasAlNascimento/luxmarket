@@ -39,11 +39,10 @@ $quaternary: #373737;
     color: black;
 }
 
-.button__add-cart {
-    position: absolute;
-    top: 500px;
-    
-    align-self: center;
+div.product__infos > button {
+   
+    width: 210px;
+    margin-top: 10px;
     background-color: $secondary;
     border: none;
     border-radius: 10px;
