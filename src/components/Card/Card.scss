@@ -31,24 +31,8 @@ $quaternary: #373737;
 .product__infos {
     padding: 20px;
     border-top: 1px solid #ddd;
-}
-
-.product__price {
-    font-size: 25px;
-    font-weight: 400;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.product__title {
-    font-size: 15px;
-    color: black;
-}
-
-.product__infos {
 
     button {
-
         width: 210px;
         margin-top: 10px;
         background-color: $secondary;
@@ -57,7 +41,24 @@ $quaternary: #373737;
         padding: 10px;
         font-weight: 500;
         color: $tertiary;
+        cursor: pointer;
+        transition: background-color 0.5s, transform 0.5s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: #082756;
+        }
+    }
+}
+
+    .product__price {
+        font-size: 25px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 10px;
     }
 
-
-}
+    .product__title {
+        font-size: 15px;
+        color: black;
+    }
