@@ -1,4 +1,3 @@
-
 $primary: #b1b1b1;
 $secondary: #0F52BA;
 $tertiary: #ffffff;
@@ -46,15 +45,19 @@ $quaternary: #373737;
     color: black;
 }
 
-div.product__infos > button {
-   
-    width: 210px;
-    margin-top: 10px;
-    background-color: $secondary;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 500;
-    color: $tertiary;
+.product__infos {
+
+    button {
+
+        width: 210px;
+        margin-top: 10px;
+        background-color: $secondary;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: 500;
+        color: $tertiary;
+    }
+
 
 }
