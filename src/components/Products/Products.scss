@@ -19,3 +19,11 @@
     row-gap: 60px;
 }
 
+.products__error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 250px 20px 80px;
+    gap: 40px;
+}

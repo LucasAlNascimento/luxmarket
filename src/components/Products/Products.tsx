@@ -11,6 +11,8 @@ import Skeleton from "../Skeleton/Skeleton";
 
 function Products() {
 
+    //"https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC"
+
     const { data, isLoading, isError } = useQuery<ProductResponse>("products", () => {
         return axios
             .get<ProductResponse>("https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC")
@@ -20,15 +22,18 @@ function Products() {
     if (isLoading) {
         return (
             <div className="products__skeleton">
-                {[...Array(8)].map((index) => (
-                    <Skeleton key={index} width={250} height={350} borderRadius={10}/>
+                {[...Array(8)].map((_, index) => (
+                    <Skeleton key={index} width={250} height={350} borderRadius={10} />
                 ))}
             </div>
         )
     }
 
     if (isError) {
-        return <div className="products">Error</div>
+        return <div className="products__error">
+            <h2>404</h2>
+            <h3>Página Não Encontrada!</h3>
+        </div>
     }
 
     return (
