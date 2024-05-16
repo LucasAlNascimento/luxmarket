@@ -9,7 +9,7 @@ type Props = {
 
 function Skeleton({ width, height, borderRadius }: Props) {
     return (
-        <div className='products' style={{ width, height, borderRadius}} />
+        <div className='container__products' style={{ width, height, borderRadius}} />
     )
 }
 

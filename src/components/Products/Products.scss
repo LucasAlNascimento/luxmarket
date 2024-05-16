@@ -7,3 +7,15 @@
     width: 100%;
     gap: 60px;
 }
+
+.products__skeleton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 20px 80px;
+    width: 100%;
+    column-gap: 135px;
+    row-gap: 60px;
+}
+
