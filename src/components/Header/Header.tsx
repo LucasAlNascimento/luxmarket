@@ -7,8 +7,8 @@ function Header(){
     return(
         <header className="header">
             <div className="container">
-                <div className="logomks">LUX</div>
-                <div className="logosistemas">Market</div>
+                <div className="logolux">LUX</div>
+                <div className="logomarket">Market</div>
             </div>
                 <CartButton />
         </header>
