@@ -1,7 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "../Header/Header.scss"
-import CartButton from "../CartButton/CartButton";
-
-
 
 function Header(){
     return(
@@ -10,7 +8,6 @@ function Header(){
                 <div className="logolux">LUX</div>
                 <div className="logomarket">Market</div>
             </div>
-                <CartButton />
         </header>
     )
 }

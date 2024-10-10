@@ -1,15 +1,17 @@
 export interface ProductData {
-    id?: number;
-    name: string;
-    brand?: string;
-    description?: string;
-    photo: string;
+    id?: string;
+    title: string;
     price: number;
-    createdAt?: string;
-    updatedAt?: string;
+    thumbnail: string;
 }
 
 export interface ProductResponse {
-    products: ProductData[];
-    count: number;
+    results: ProductData[];
+}
+
+export interface Props {
+    title: string;
+
+
+
 }

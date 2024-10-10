@@ -1,10 +1,9 @@
 .products {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));;
     justify-content: center;
     align-items: center;
-    padding: 200px 20px 80px;
-    width: 100%;
+    padding: 200px 80px 100px 80px;
     gap: 60px;
 }
 

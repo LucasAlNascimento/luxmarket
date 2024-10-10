@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import axios from "axios";
 import { useQuery } from "react-query";
 
@@ -8,21 +9,18 @@ import "./Products.scss"
 import Card from "../Card/Card";
 import Skeleton from "../Skeleton/Skeleton";
 
-
 function Products() {
-
-    //"https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC"
 
     const { data, isLoading, isError } = useQuery<ProductResponse>("products", () => {
         return axios
-            .get<ProductResponse>("https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC")
+            .get<ProductResponse>("https://api.mercadolibre.com/sites/MLB/search?category=MLB1055")
             .then((response) => response.data);
     });
 
     if (isLoading) {
         return (
             <div className="products__skeleton">
-                {[...Array(8)].map((_, index) => (
+                {[...Array(48)].map((_, index) => (
                     <Skeleton key={index} width={250} height={350} borderRadius={10} />
                 ))}
             </div>
@@ -38,8 +36,12 @@ function Products() {
 
     return (
         <div className="products">
-            {data?.products.map((product) => (
-                <Card key={product.id} photo={product.photo} name={product.name} price={product.price} />
+            {data?.results.map((results) => (
+                <Card
+                    key={results.id}
+                    thumbnail={results.thumbnail}
+                    title={results.title}
+                    price={results.price} />
             ))}
         </div>
     )
