@@ -13,7 +13,11 @@ function Products() {
 
     const { data, isLoading, isError } = useQuery<ProductResponse>("products", () => {
         return axios
-            .get<ProductResponse>("https://api.mercadolibre.com/sites/MLB/search?category=MLB1055", {
+            .get<ProductResponse>("https://api.mercadolibre.com/sites/MLB/domain_discovery/search", {
+                params: {
+                  limit: 30,
+                  q: "celular",
+                },
                 headers: {
                   Authorization: `Bearer ${process.env.NEXT_PUBLIC_MERCADOLIBRE_AUTHORIZATION}`
                 }
